@@ -122,6 +122,10 @@ header {
     margin-bottom: 2rem !important;
 }
 
+.user_caption {
+    text-transform: capitalize;
+}
+
 .view_btn {
     background-color: black;
     border-radius: 3rem;
