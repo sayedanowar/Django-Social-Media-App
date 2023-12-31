@@ -2,6 +2,11 @@ body {
     background-color: #e9e9e9 !important;
 }
 
+.user_profile_sec {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+}
+
 .add-btn a {
     border: none;
     background-color: transparent !important;
@@ -13,7 +18,17 @@ body {
 }
 
 .add-btn span {
-    color: white !important;
+    color: rgb(50, 50, 50) !important;
+    font-size: 1.75rem !important;
+}
+
+.add-btn span a {
+    color: rgb(50, 50, 50) !important;
+    font-size: 1.75rem !important;
+}
+
+.add-btn span a:hover {
+    color: rgb(0, 0, 0) !important;
     font-size: 1.75rem !important;
 }
 
@@ -27,8 +42,35 @@ body {
     font-size: 1.125rem;
     border-radius: .625rem;
     transition: .3s;
+    cursor: pointer;
 }
 
 .add-btn .follow_unfollow_btn:hover {
     background-color: #0051ff;
+}
+
+.pic_bio_name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.pic_bio_name img {
+    width: 250px;
+    height: 250px;
+    border-radius: 3rem;
+}
+
+.pic_bio_name h5 {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    color: rgb(50, 50, 50);
+}
+
+.bio {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    color: rgb(50, 50, 50);
+    font-size: 1.125rem;
 }
