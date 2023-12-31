@@ -137,3 +137,35 @@ header {
     background-color: rgb(40, 40, 40);
     color: white;
 }
+
+@media (max-width: 1024px) {
+
+    .header_inner,
+    .left-side,
+    .right-side {
+        display: flex !important;
+    }
+
+    .right-side {
+        margin-top: .375rem;
+    }
+
+    .container {
+        margin-top: 5rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        margin-top: 1rem;
+    }
+
+    .user_username {
+        display: none;
+    }
+
+    .left-side input {
+        display: none;
+    }
+}
