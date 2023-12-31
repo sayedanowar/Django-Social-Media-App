@@ -1,18 +1,18 @@
 /* ----------------- Start Document ----------------- */
-(function($){
+(function ($) {
     "use strict";
-    
-    $(document).ready(function(){
-        
+
+    $(document).ready(function () {
+
         /*----------------------------------------------------*/
         /* Dashboard Scripts
         /*----------------------------------------------------*/
-    
+
         // Dashboard Nav Submenus
-        $('.sidebar_inner ul li a').on('click', function(e){
-            if($(this).closest("li").children("ul").length) {
-                if ( $(this).closest("li").is(".active-submenu") ) {
-                   $('.sidebar_inner ul li').removeClass('active-submenu');
+        $('.sidebar_inner ul li a').on('click', function (e) {
+            if ($(this).closest("li").children("ul").length) {
+                if ($(this).closest("li").is(".active-submenu")) {
+                    $('.sidebar_inner ul li').removeClass('active-submenu');
                 } else {
                     $('.sidebar_inner ul li').removeClass('active-submenu');
                     $(this).parent('li').addClass('active-submenu');
@@ -21,7 +21,7 @@
             }
         });
 
-    
+
         /*--------------------------------------------------*/
         /*  Tippy JS 
         /*--------------------------------------------------*/
@@ -32,20 +32,19 @@
             arrowType: 'sharp',
             size: 'regular',
             duration: 200,
-    
+
             // 'shift-toward', 'fade', 'scale', 'perspective'
             animation: 'shift-away',
-    
+
             animateFill: true,
             theme: 'dark',
-    
+
             // How far the tooltip is from its reference element in pixels 
             distance: 10,
-    
+
         });
-    
-    // ------------------ End Document ------------------ //
+
+        // ------------------ End Document ------------------ //
     });
-    
-    })(this.jQuery);
-    
+
+})(this.jQuery);
