@@ -112,3 +112,24 @@ header {
 .like_logo {
     color: black;
 }
+
+.user_sugg {
+    border-radius: 1rem;
+}
+
+.post_box {
+    border-radius: .875rem;
+    margin-bottom: 2rem !important;
+}
+
+.view_btn {
+    background-color: black;
+    border-radius: 3rem;
+    color: white;
+    transition: .3s;
+}
+
+.view_btn:hover {
+    background-color: rgb(40, 40, 40);
+    color: white;
+}
