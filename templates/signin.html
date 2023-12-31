@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'assets/images/favicon.png' %}" rel="icon" type="image/png">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/tailwind.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/signin.css' %}">
+    <title>Sign In - WallpaperShare.Com</title>
+
+</head>
+
+<body>
+    <b>
+        <h1 class="logo">WallpaperShare.Com</h1>
+    </b>
+    <div id="wrapper" class="wrapper">
+        <div class="lg:p-12 max-w-md max-w-xl lg:my-0 my-12 mx-auto p-6 space-y-">
+            <div>
+                {% for message in messages %}
+                <h5 class="error_msg">{{message}}</h5>
+                {% endfor %}
+            </div>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <input type="text" name="username" placeholder="Username" class="shadow-none inpt_box">
+                <input type="password" name="password" placeholder="Password" class="shadow-none inpt_box">
+                <button type="submit" class="py-3 rounded-md text-white text-xl w-full login_btn">Log In</button>
+                <div class="text-center signup_page_btn">
+                    <p class="text-base">Don't have an account ? <a href="/signup" class="signup_btn">Sign Up</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+        <p class="copyright"> © 2024 WallpaperShare.Com</p>
+    </div>
+</body>
+
+</html>

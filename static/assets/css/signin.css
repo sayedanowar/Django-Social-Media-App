@@ -1,0 +1,54 @@
+body {
+    background-color: #f1f1f1 !important;
+}
+
+.logo {
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 9rem;
+    background-color: white;
+    box-shadow: 0px 1px 7px rgba(200, 200, 200, 0.7);
+}
+
+.error_msg {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: red;
+}
+
+.inpt_box {
+    border: 1px solid rgb(191, 191, 191) !important;
+    margin-bottom: .625rem;
+    border-radius: .625rem !important;
+    color: black !important;
+}
+
+input:focus {
+    border: 1px solid black !important;
+}
+
+.login_btn {
+    background-color: black;
+    border-radius: .625rem !important;
+    transition: .3s;
+}
+
+.login_btn:hover {
+    background-color: rgb(25, 25, 25);
+}
+
+.signup_page_btn {
+    margin-top: 2rem;
+}
+
+.signup_btn {
+    color: #222;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 17rem;
+}

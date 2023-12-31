@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'assets/images/favicon.png' %}" rel="icon" type="image/png">
+    <link rel="stylesheet" href="{% static 'assets/css/icons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/uikit.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/tailwind.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/setting.css' %}">
+    <title>Settings - WallpaperShare.Com</title>
+</head>
+
+<body>
+    <div class="container m-auto">
+        <h1 class="text-2xl text-gray-900"><a href="/">Home</a> - Account Setting For
+            <b>@{{user.username}}</b>
+        </h1>
+        <br>
+        <br>
+        <br>
+        <div class="col-span-2 ac_settings_box">
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="grid grid-cols-2 gap-3 lg:p-6 p-4">
+                    <div class="col-span-2 image_inpt_div">
+                        <label for="">Profile Image</label>
+                        <img class="user_profile_img" src="{{user_profile.profileimg.url}}" />
+                        <br>
+                        <input type="file" name="image" value="" class="shadow-none profile_pic_inpt">
+                    </div>
+                    <div class="col-span-2">
+                        <label for="about">Short Bio</label>
+                        <textarea maxlength="21" id="about" name="bio" rows="3"
+                            class="shadow-none">{{user_profile.bio}}</textarea>
+                    </div>
+                    <div class="col-span-2 location_div">
+                        <label for="">Location</label>
+                        <input type="text" name="location" value="{{user_profile.location}}" class="shadow-none">
+                    </div>
+                </div>
+                <div class="p-6 pt-0 flex justify-end space-x-3">
+                    <button class="p-2 px-4"><a class="cancel_btn" href="/">Cancel</a></button>
+                    <button type="submit" class="save_btn">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
