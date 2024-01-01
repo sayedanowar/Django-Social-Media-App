@@ -22,6 +22,7 @@ body {
 .add-btn span {
     color: rgb(50, 50, 50) !important;
     font-size: 1.75rem !important;
+    text-transform: capitalize;
 }
 
 .add-btn span a {
@@ -89,4 +90,65 @@ body {
 
 .central-meta img {
     border-radius: 1.5rem;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+@media (max-width: 425px) {
+
+    .add-btn {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        margin-top: 12.5rem;
+        align-items: flex-end;
+        justify-content: center;
+        padding-left: 3rem !important;
+    }
+
+    .add-btn span {
+        font-size: 1.125rem !important;
+    }
+
+    .add-btn span a {
+        font-size: 1.125rem !important;
+    }
+
+    .add-btn a {
+        margin: 0;
+        padding: 0;
+    }
+
+    .add-btn .follow_unfollow_btn {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        padding-left: .625rem;
+        padding-right: .625rem;
+        font-size: .875rem;
+    }
+
+    .pic_bio_name {
+        display: block;
+    }
+
+    .pic_bio_name img {
+        width: 175px;
+        height: 175px;
+    }
+
+    .pic_bio_name h5 {
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
+
+    .bio {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .bio .bio_h6 {
+        margin-right: .5rem;
+    }
 }
