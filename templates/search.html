@@ -39,18 +39,14 @@
             </div>
         </header>
     </form>
-    <div style="margin-left: 250px;">
+    <div class="search_result_item_div">
         <div class="container">
             <div class="row ng-scope">
-                <div class="col-md-3 col-md-push-9">
-                    <h4>Results For <span class="fw-semi-bold"><b>{{username}}</b></span></h4>
-                    <br>
-                </div>
                 <div class="col-md-9 col-md-pull-3">
                     {% for users in username_profile_list %}
-                    <section class="search-result-item">
-                        <a class="image-link" href="/profile/{{users.user}}"><img class="image"
-                                src="{{users.profileimg.url}}">
+                    <div class="search-result-item">
+                        <a class="image-link" href="/profile/{{users.}}">
+                            <img class="image" src="{{users.profileimg.url}}">
                         </a>
                         <div class="search-result-item-body">
                             <div class="row">
@@ -62,17 +58,13 @@
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </div>
                     {% endfor %}
                 </div>
             </div>
         </div>
     </div>
-    <script src="{% static 'assets/js/tippy.all.min.js' %}"></script>
-    <script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
     <script src="{% static 'assets/js/uikit.js' %}"></script>
-    <script src="{% static 'assets/js/simplebar.js' %}"></script>
-    <script src="{% static 'assets/js/custom.js' %}"></script>
 </body>
 
 </html>
