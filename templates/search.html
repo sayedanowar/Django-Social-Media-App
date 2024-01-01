@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="favicon.png" rel="icon" type="image/png">
+    <link href="{% static 'assets/images/favicon.ico' %}" rel="icon" type="image/png">
     <link rel="stylesheet" href="{% static 'assets/css/uikit.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/tailwind.css' %}">
@@ -45,7 +45,7 @@
                 <div class="col-md-9 col-md-pull-3">
                     {% for users in username_profile_list %}
                     <div class="search-result-item">
-                        <a class="image-link" href="/profile/{{users.}}">
+                        <a class="image-link" href="/profile/{{users.user}}">
                             <img class="image" src="{{users.profileimg.url}}">
                         </a>
                         <div class="search-result-item-body">
