@@ -3,6 +3,8 @@ body {
 }
 
 .user_profile_sec {
+    display: flex;
+    flex-direction: row;
     margin-top: 2rem !important;
     margin-bottom: 2rem !important;
 }
@@ -58,13 +60,18 @@ body {
 .pic_bio_name img {
     width: 250px;
     height: 250px;
-    border-radius: 3rem;
+    border-radius: 90rem;
+}
+
+.pic_bio_name .user_name {
+    margin-left: 1.5rem;
 }
 
 .pic_bio_name h5 {
     font-size: 2.5rem;
     text-transform: capitalize;
     color: rgb(50, 50, 50);
+    margin-bottom: 1rem;
 }
 
 .bio {
@@ -73,4 +80,13 @@ body {
     padding: 0;
     color: rgb(50, 50, 50);
     font-size: 1.125rem;
+}
+
+.central-meta {
+    box-shadow: none !important;
+    border-radius: 2rem;
+}
+
+.central-meta img {
+    border-radius: 1.5rem;
 }

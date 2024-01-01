@@ -18,7 +18,6 @@
 <body>
 	<section class="user_profile_sec">
 		<div class="feature-photo">
-			<!-- <figure><img src="{% static 'assets/images/coverPic.jpg' %}" alt=""></figure> -->
 			<form action="/follow" method="POST">
 				{% csrf_token %}
 				<div class="add-btn">
@@ -49,81 +48,43 @@
 					{% endif %}
 				</div>
 			</form>
-			<div class="container-fluid pic_bio_name">
-				<div class="col-lg-2 col-sm-3">
-					<img src="{{user_profile.profileimg.url}}" alt="">
-				</div>
-				<div class="col-lg-10 col-sm-9">
-					<h5>
-						<b>{{user_profile.user.username}}</b>
-					</h5>
-					<div class="bio">
-						<b>{{user_profile.bio}}</b>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section>
-		<div class="gap gray-bg">
 			<div class="container-fluid">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="row" id="page-contents">
-							<div class="col-lg-3">
-								<aside class="sidebar static">
-
-
-
-								</aside>
-							</div><!-- sidebar -->
-
-
-
-
-
-
-
-
-
-
-							<div class="col-lg-6">
-								<div class="central-meta">
-									<ul class="photos">
-
-										{% for post in user_posts %}
-										<li>
-											<a class="strip" href="{{post.image.url}}" title=""
-												data-strip-group="mygroup" data-strip-group-options="loop: false">
-												<img src="{{post.image.url}}" style="height: 250px; width: 300px;"
-													alt=""></a>
-										</li>
-										{% endfor %}
-
-
-
-									</ul>
-									<!--<div class="lodmore"><button class="btn-view btn-load-more"></button></div>-->
-								</div><!-- photos -->
-							</div><!-- centerl meta -->
-							<div class="col-lg-3">
-								<aside class="sidebar static">
-
-								</aside>
-							</div><!-- sidebar -->
+				<div class="pic_bio_name">
+					<div class="user_avater">
+						<img src="{{user_profile.profileimg.url}}" alt="">
+					</div>
+					<div class="user_name">
+						<h5>
+							<b>{{user_profile.user.username}}</b>
+						</h5>
+						<div class="bio">
+							<h6><b>{{user_profile.bio}}</b></h6>
+							<h6><b>{{user_profile.location}}</b></h6>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-
-
+	<section>
+		<div class="gap">
+			<div class="container-fluid">
+				<div class="central-meta">
+					<ul class="photos">
+						{% for post in user_posts %}
+						<li>
+							<a class="strip" href="{{post.image.url}}" title="" data-strip-group="mygroup">
+								<img src="{{post.image.url}}" alt="">
+							</a>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
 	<script src="{% static 'js/main.min.js' %}"></script>
 	<script src="{% static 'js/script.js' %}"></script>
-
 </body>
-
 
 </html>
